@@ -16,7 +16,12 @@
       .gradient-line {
         height: 3.5px;
         width: 100%;
-        background: linear-gradient(to right, #1E90FF, #00008B, #800080, #4B0082, #FF69B4, #FFA500, #FFFF00, #00FF00)
+        background: linear-gradient(to right, #1E90FF, #00008B, #800080, #4B0082, #FF69B4, #FFA500, #FFFF00, #00FF00);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: top 0.2s ease-in-out;
       }
       ul {
         list-style: none;
@@ -35,6 +40,13 @@
       }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+      window.addEventListener('scroll', function() {
+        const scrollPos = window.scrollY || window.pageYOffset;
+        const gradientLine = document.querySelector('.gradient-line');
+        gradientLine.style.top = scrollPos + 'px';
+      });
+   </script>
   </head>
   <body>
     <div class="gradient-line">
