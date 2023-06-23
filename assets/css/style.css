@@ -94,8 +94,8 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  bottom: 0;
+  right: 0;
   border: 2px solid purple; /* Border covering the entire website */
   z-index: -1; /* Place it behind other elements */
 }
